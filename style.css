@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(password.jpg);
+  background-size: cover;
+  background-blend-mode: luminosity;
+  background-color: rgb(34, 28, 28);
+  color: rgb(124, 246, 67);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.pw-container {
+  background-color: rgb(246, 183, 34);
+  box-shadow: 0 9px 2 0px rgba(236, 234, 234, 0.5);
+  min-width: 400px;
+  border-radius: 5px;
+}
+
+.pw-header {
+  padding: 1rem;
+}
+
+.pw {
+  background-color: rgb(30, 30, 30);
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  position: relative;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.pw button {
+  background-color: white;
+  border: none;
+  color: rgb(29, 2, 56);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 0.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 20%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+}
+
+.pw:hover button {
+  opacity: 1;
+  transform: translate(0, 0%);
+}
+
+.pw-body {
+  padding: 0 1rem 1rem;
+}
+
+.form-control {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+
+.generate {
+  background-color: #100e08;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Reset default checkbox styles */
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 2px solid #292727;
+  border-radius: 50%;
+  transition: border-color 0.5s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Custom checkbox style when checked */
+.checkbox:checked {
+  border-color: #06d6a0;
+  background-color: #06d6a0;
+}
+
+/* Style for the checkmark inside the checkbox */
+.checkbox:after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* Custom checkmark style when checkbox is checked */
+.checkbox:checked:after {
+  display: block;
+}
+
+/* Additional styles for the label to improve usability */
+.form-control label {
+  cursor: pointer;
+}
